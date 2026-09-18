@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <circle cx="256" cy="256" r="242" fill="#ffffff" stroke="#ef4444" stroke-width="16"/>
+  <g transform="translate(0, 10)">
+    <path fill="#ef4444" d="M285.5 120a10 10 0 0 0-14.1 0l-58.4 58.4a84 84 0 1 0 102.5 0l-15.9-15.9a61.5 61.5 0 1 1-72.5 0l44.3-44.3a10 10 0 0 0 0-14.1z"/>
+    <circle cx="302" cy="168" r="16" fill="#ef4444"/>
+  </g>
+  <text x="256" y="440" font-family="'Segoe UI', Arial, sans-serif" font-size="50" font-weight="900" fill="#b91c1c" letter-spacing="2" text-anchor="middle">PYTORCH</text>
+</svg>

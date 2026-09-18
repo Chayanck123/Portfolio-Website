@@ -43,13 +43,21 @@
   will-change: left, top;
   transition: transform 0.3s ease-out;
 }
-.resume-button {
+.resume-container {
   position: absolute;
   z-index: 99;
   display: flex;
-  gap: 5px;
+  align-items: center;
+  gap: 8px;
   bottom: 40px;
   right: 0;
+  transform-origin: left bottom;
+  transform: translateX(100%) rotateZ(-90deg);
+}
+.resume-button {
+  display: flex;
+  gap: 5px;
+  align-items: center;
   width: auto;
   text-wrap: nowrap;
   letter-spacing: 4px;
@@ -58,19 +66,71 @@
   font-weight: 600;
   color: #5e5e5e;
   cursor: pointer;
-  transition: 0.5s;
-  transform-origin: left bottom;
-  transform: translateX(100%) rotateZ(-90deg);
+  transition: 0.3s ease;
+  text-decoration: none;
 }
 .resume-button:hover {
   color: #fff;
 }
-div.resume-button span {
+.resume-button span {
   color: #fff;
   font-size: 17px;
   margin-top: -1px;
   display: flex;
   align-items: center;
+}
+.resume-download-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #a0a0a0;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+}
+.resume-download-btn:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #ffffff;
+  transform: scale(1.1);
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.25);
+}
+.resume-tooltip {
+  position: absolute;
+  bottom: 135%;
+  right: 50%;
+  transform: translateX(50%);
+  background: #181818;
+  color: #ffffff;
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  padding: 5px 9px;
+  border-radius: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+.resume-download-btn:hover .resume-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(50%) translateY(-3px);
+}
+@media only screen and (max-width: 767px) {
+  .resume-tooltip {
+    display: none;
+  }
 }
 .check-line {
   position: fixed;
@@ -91,13 +151,21 @@ div.resume-button span {
   }
 }
 @media only screen and (min-width: 768px) {
-  .resume-button {
+  .resume-container {
     transform: none;
+    gap: 12px;
+  }
+  .resume-button {
     font-size: 20px;
     line-height: 20px;
   }
-  div.resume-button span {
+  .resume-button span {
     font-size: 23px;
     margin-top: -1.5px;
+  }
+  .resume-download-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 17px;
   }
 }

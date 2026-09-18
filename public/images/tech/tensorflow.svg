@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <circle cx="256" cy="256" r="242" fill="#ffffff" stroke="#ea580c" stroke-width="16"/>
+  <g transform="translate(136, 110) scale(0.95)">
+    <path fill="#dc2626" d="M120 0L240 70V150L190 120V260L120 220V0Z"/>
+    <path fill="#ea580c" d="M120 0L0 70V150L50 120V260L120 220V0Z"/>
+    <path fill="#f97316" d="M120 220L190 260L120 300L50 260L120 220Z"/>
+  </g>
+  <text x="256" y="440" font-family="'Segoe UI', Arial, sans-serif" font-size="44" font-weight="900" fill="#c2410c" letter-spacing="1.5" text-anchor="middle">TENSORFLOW</text>
+</svg>

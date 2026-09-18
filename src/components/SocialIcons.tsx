@@ -1,11 +1,11 @@
 import {
   FaGithub,
-  FaInstagram,
   FaLinkedinIn,
-  FaXTwitter,
+  FaEnvelope,
 } from "react-icons/fa6";
+import { SiLeetcode } from "react-icons/si";
 import "./styles/SocialIcons.css";
-import { TbNotes } from "react-icons/tb";
+import { TbNotes, TbDownload } from "react-icons/tb";
 import { useEffect } from "react";
 import HoverLinks from "./HoverLinks";
 
@@ -56,36 +56,85 @@ const SocialIcons = () => {
     });
   }, []);
 
+  const handleResumeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.open("/Chayan_Kumar_Resume.pdf", "_blank", "noopener,noreferrer");
+
+    const link = document.createElement("a");
+    link.href = "/Chayan_Kumar_Resume.pdf";
+    link.download = "Chayan_Kumar_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="icons-section">
       <div className="social-icons" data-cursor="icons" id="social">
         <span>
-          <a href="https://github.com" target="_blank">
+          <a
+            href="https://github.com/Chayanck123"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="GitHub"
+          >
             <FaGithub />
           </a>
         </span>
         <span>
-          <a href="https://www.linkedin.com" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/chayankumar/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="LinkedIn"
+          >
             <FaLinkedinIn />
           </a>
         </span>
         <span>
-          <a href="https://x.com" target="_blank">
-            <FaXTwitter />
+          <a
+            href="https://leetcode.com/u/Chayannn/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="LeetCode"
+          >
+            <SiLeetcode />
           </a>
         </span>
         <span>
-          <a href="https://www.instagram.com" target="_blank">
-            <FaInstagram />
+          <a
+            href="mailto:chayankumar08@gmail.com"
+            title="Email Chayan"
+          >
+            <FaEnvelope />
           </a>
         </span>
       </div>
-      <a className="resume-button" href="#">
-        <HoverLinks text="RESUME" />
-        <span>
-          <TbNotes />
-        </span>
-      </a>
+      <div className="resume-container">
+        <a
+          className="resume-button"
+          href="/Chayan_Kumar_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Open & Download Resume"
+          onClick={handleResumeClick}
+        >
+          <HoverLinks text="RESUME" />
+          <span>
+            <TbNotes />
+          </span>
+        </a>
+        <a
+          className="resume-download-btn"
+          href="/Chayan_Kumar_Resume.pdf"
+          download="Chayan_Kumar_Resume.pdf"
+          title="Download Resume"
+          data-cursor="disable"
+        >
+          <TbDownload />
+          <span className="resume-tooltip">Download PDF</span>
+        </a>
+      </div>
     </div>
   );
 };

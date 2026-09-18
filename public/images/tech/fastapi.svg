@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <circle cx="256" cy="256" r="242" fill="#ffffff" stroke="#0d9488" stroke-width="16"/>
+  <path fill="#0d9488" d="M285 90L170 260h80l-40 140 145-190h-80z"/>
+  <text x="256" y="440" font-family="'Segoe UI', Arial, sans-serif" font-size="52" font-weight="900" fill="#0f766e" letter-spacing="2" text-anchor="middle">FASTAPI</text>
+</svg>

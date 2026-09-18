@@ -7,9 +7,14 @@
   color: var(--accentColor);
 }
 .work-section {
+  position: relative;
   transition: 0s;
   height: 100vh;
+  width: 100%;
   box-sizing: border-box;
+  background-color: var(--backgroundColor);
+  overflow: hidden;
+  z-index: 2;
   will-change: transform;
 }
 .work-container {
@@ -18,14 +23,19 @@
   flex-direction: column;
   height: 100%;
   align-content: stretch;
+  position: relative;
+  width: var(--cWidth);
+  max-width: var(--cMaxWidth);
 }
 .work-flex {
-  width: 100%;
+  width: max-content;
   display: flex;
   height: 100%;
-  margin-left: -80px;
-  padding-right: 120px;
+  margin-left: 0;
+  padding-left: 20px;
+  padding-right: 140px;
   position: relative;
+  box-sizing: border-box;
 }
 .work-box {
   padding: 80px;
@@ -44,13 +54,12 @@
 .work-flex::before,
 .work-flex::after {
   content: "";
-  width: calc(50000vw);
+  width: 100%;
   height: 1px;
   background-color: #363636;
   position: absolute;
-  left: 50%;
+  left: 0;
   top: 0;
-  transform: translateX(-50%);
 }
 .work-flex::after {
   top: 100%;
@@ -63,6 +72,17 @@
 }
 .work-title > div {
   text-align: right;
+}
+.work-title-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+.work-title-link:hover h4 {
+  color: var(--accentColor);
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 .work-title h3 {
   font-size: 50px;
@@ -165,7 +185,7 @@
     font-size: 50px;
   }
 }
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1024px) {
   .work-box {
     width: 350px;
     padding: 30px;
