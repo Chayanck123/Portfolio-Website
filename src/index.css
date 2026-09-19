@@ -125,3 +125,16 @@ body {
     font-size: 40px;
   }
 }
+
+/* Hide Netlify injected badge / drawer iframes */
+iframe[src*="netlify"],
+iframe[title*="Netlify"],
+[class*="netlify-badge"],
+[id*="netlify-badge"],
+#netlify-badge,
+.netlify-badge {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+}
